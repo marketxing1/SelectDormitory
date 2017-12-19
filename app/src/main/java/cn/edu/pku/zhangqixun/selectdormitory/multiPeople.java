@@ -24,8 +24,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-import cn.edu.pku.zhangqixun.selectdormitory.Model.Student;
-
 public class multiPeople extends AppCompatActivity {
     LinearLayout personlayout1,personlayout2,personlayout3,tongzhurentv, mylayout;
     View v1,v2,v3,v4;
@@ -39,7 +37,7 @@ public class multiPeople extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_multi_people);
+        setContentView(R.layout.multi_people);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         if(getIntent().getIntExtra("personno",1)==0){
@@ -113,7 +111,7 @@ public class multiPeople extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if(code.equals("0")) {
-                    Intent intent=new Intent(getApplicationContext(),BacktoSuccessActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),Success_Back.class);
                     Student student= (Student) getIntent().getSerializableExtra("student");
                     student.setRoom(dorno);
                     System.out.println(dorno+"寝室号");

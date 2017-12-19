@@ -15,8 +15,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.edu.pku.zhangqixun.selectdormitory.Model.Student;
-
 public class ChooseRoom extends AppCompatActivity {
     ListView myinfolistview;
     ImageView myimg;
@@ -26,7 +24,7 @@ public class ChooseRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chooseroom);
+        setContentView(R.layout.choose_notice);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("办理住宿");
@@ -48,7 +46,7 @@ public class ChooseRoom extends AppCompatActivity {
         btn_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(ChooseRoom.this,ChooseNoofPerson.class);
+                Intent intent=new Intent(ChooseRoom.this,ChoosePerson.class);
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("student",student);
                 intent.putExtras(bundle);

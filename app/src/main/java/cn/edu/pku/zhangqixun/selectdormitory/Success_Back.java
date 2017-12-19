@@ -6,22 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import cn.edu.pku.zhangqixun.selectdormitory.Model.*;
 
-public class BacktoSuccessActivity extends AppCompatActivity {
+public class Success_Back extends AppCompatActivity {
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_backto_success);
+        setContentView(R.layout.success_back);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("办理住宿成功");
+        actionBar.setTitle("亲，办理住宿成功啦");
         btn= (Button) findViewById(R.id.back_shouye);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(BacktoSuccessActivity.this,SuccessActivity.class);
+                Intent intent=new Intent(Success_Back.this,Success.class);
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("student",getIntent().getSerializableExtra("student"));
                 intent.putExtras(bundle);

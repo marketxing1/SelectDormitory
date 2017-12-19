@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="欢迎来到住宿办理"
+            android:text="亲，欢迎来办理住宿！"
             android:layout_marginTop="15dp"
             android:textSize="25dp"/>
 
@@ -34,10 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="请先登录" />
+            android:text="--请您登录--" />
 
         <EditText
-            android:id="@+id/accountEt"
+            android:id="@+id/student_id"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="50dp"
@@ -52,17 +52,16 @@
         </EditText>
 
         <EditText
-            android:id="@+id/pwdEt"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="15dp"
             android:singleLine="true"
-            android:password="true"
             android:background="@drawable/edit_style"
             android:hint="请输入您的密码"
-
+            android:inputType="textPassword"
             android:ems="10" />
 
         <Button
@@ -82,4 +81,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:id="@+id/notice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginPanel"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="27dp"
+        android:text="亲，欢迎来办理住宿！"
+        android:textSize="25dp" />
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package cn.edu.pku.zhangqixun.selectdormitory.Model;
+package cn.edu.pku.zhangqixun.selectdormitory;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,16 +8,19 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-import cn.edu.pku.zhangqixun.selectdormitory.R;
+import cn.edu.pku.zhangqixun.*;
 
 /**
- * Created by lenovo on 2017/11/22.
+ * author: 余星星
+ * data:2017/12/13.
+ * E-mail:2549721818@qq.com
+ * brief:主函数。
  */
-public class MyArrayAdapter extends ArrayAdapter {
+public class MyAdapter extends ArrayAdapter {
     Context context;
     int resourceid;
     List myList;
-    public MyArrayAdapter(Context context, int resource, List mylist) {
+    public MyAdapter(Context context, int resource, List mylist) {
         super(context, resource, mylist);
         this.context=context;
         this.resourceid=resource;

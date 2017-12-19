@@ -1,9 +1,12 @@
-package cn.edu.pku.zhangqixun.selectdormitory.Model;
+package cn.edu.pku.zhangqixun.selectdormitory;
 
 import java.io.Serializable;
 
 /**
- * Created by lenovo on 2017/11/25.
+ * author: 余星星
+ * data:2017/12/13.
+ * E-mail:2549721818@qq.com
+ * brief:学生信息调度。
  */
 public class Student implements Serializable{
     String studentid;

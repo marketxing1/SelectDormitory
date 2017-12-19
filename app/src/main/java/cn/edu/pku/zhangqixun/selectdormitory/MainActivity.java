@@ -34,40 +34,48 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
-import cn.edu.pku.zhangqixun.selectdormitory.Model.Student;
-
+/**
+ * author: 余星星
+ * data:2017/12/13.
+ * E-mail:2549721818@qq.com
+ * brief:主函数。
+ */
 public class MainActivity extends AppCompatActivity {
     Button login_btn;
-    EditText my_stuid,my_password;
+    EditText my_student_id,my_password;
     String password;
-    String stuid;
+    String student_id;
     String login_url="https://api.mysspku.com/index.php/V1/MobileCourse/Login";
     String query_info="https://api.mysspku.com/index.php/V1/MobileCourse/getDetail?stuid=";
     InputStream in;
     BufferedReader bfr;
     Student student=new Student();
+
     Handler mhandler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
                 case 1:
-                    Toast.makeText(MainActivity.this, "账户或者密码错误！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "亲，账户或密码有错误哦！", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
     };
+    /**
+     * function：消息响应函数，登录提示函数！
+     * *@param void
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
         handleSSLHandshake();
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("请登录");
+        actionBar.setTitle("您好！请登录");
         login_btn= (Button) findViewById(R.id.my_login);
-        my_stuid= (EditText) findViewById(R.id.accountEt);
-        my_password= (EditText) findViewById(R.id.pwdEt);
-
+        my_student_id= (EditText) findViewById(R.id.student_id);
+        my_password= (EditText) findViewById(R.id.password);
 
         login_btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -82,16 +90,16 @@ public class MainActivity extends AppCompatActivity {
         });
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                stuid=String.valueOf(my_stuid.getText());
+            public void onClick(View v) { //单击事件
+                student_id=String.valueOf(my_student_id.getText());
                 password= String.valueOf(my_password.getText());
-                if(stuid!=null&&password!=null&&parsestudentid(stuid)){
+                if(student_id!=null&&password!=null&&parse_student_id(student_id)){
                   new Thread(new Runnable() {
                       @Override
                       public void run() {
                           try {
-                              System.out.println(login_url+"?username="+stuid+"&password="+password);
-                              URL url=new URL(login_url+"?username="+stuid+"&password="+password);
+                              System.out.println(login_url+"?username="+student_id+"&password="+password);
+                              URL url=new URL(login_url+"?username="+student_id+"&password="+password);
                               HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
                               httpURLConnection.setRequestMethod("GET");
                               httpURLConnection.setConnectTimeout(8000);
@@ -101,14 +109,14 @@ public class MainActivity extends AppCompatActivity {
                               String line = bfr.readLine();
                               Log.i("test",line);
                               if(parseJson(line)){
-                                  if(Nothavedormitory(stuid)) {
+                                  if(Verify_dormitory(student_id)) {
                                       Intent intent = new Intent(getApplicationContext(), ChooseRoom.class);
                                       Bundle bundle=new Bundle();
                                       bundle.putSerializable("student",student);
                                       intent.putExtras(bundle);
                                       startActivity(intent);
                                   }else{
-                                      Intent intent = new Intent(getApplicationContext(), SuccessActivity.class);
+                                      Intent intent = new Intent(getApplicationContext(), Success.class);
                                       intent.putExtra("student", student);
                                       startActivity(intent);
                                   }
@@ -116,15 +124,12 @@ public class MainActivity extends AppCompatActivity {
                                   Message msg=new Message();
                                   msg.what=1;
                                   mhandler.sendMessage(msg);
-
                               }
-
                           } catch (MalformedURLException e) {
                               e.printStackTrace();
                           } catch (IOException e) {
                               e.printStackTrace();
                           }
-
                       }
 
                       private boolean parseJson(String line) {
@@ -150,23 +155,29 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    private boolean parsestudentid(String stuid) {
-        if(stuid.length()==10&&stuid.substring(3,5).equals("12")){
-            System.out.println("hahah");
+    /**
+     * function：输入范围限定函数！
+     * *@param student_id
+     */
+    private boolean parse_student_id(String student_id) {
+        if(student_id.length()==10&&student_id.substring(3,5).equals("12")){
+            System.out.println("*输入学号范围正确*");
             return true;
         }else{
             return false;
         }
     }
-
-    private boolean Nothavedormitory(final String stuid) {
+    /**
+     * function：判断宿舍情况！
+     * *@param student_id
+     */
+    private boolean Verify_dormitory(final String student_id) {
         final boolean[] ifnothave = {false};
         Runnable runnable=new Runnable() {
             @Override
             public void run() {
                 try {
-                    URL url=new URL(query_info+stuid);
+                    URL url=new URL(query_info+student_id);
                     HttpURLConnection https= (HttpURLConnection) url.openConnection();
                     https.setRequestMethod("GET");
                     https.setConnectTimeout(8000);
@@ -177,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println(line);
                     JSONObject js=new JSONObject(line);
                     if(js.getString("errcode").equals("0")) {
-                         Log.i("1","哈哈三大");
+                         Log.i("1","数据获取OK");
                         JSONObject js2 = js.getJSONObject("data");
                         student.setStudentid(js2.getString("studentid"));
                         student.setName(js2.getString("name"));
@@ -191,7 +202,6 @@ public class MainActivity extends AppCompatActivity {
                             ifnothave[0]=true;
                         }
                     }
-
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -199,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         };
         Thread mythread=new Thread(runnable);
@@ -209,12 +218,12 @@ public class MainActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return ifnothave[0];
-
     }
-
-
+    /**
+     * function：http借口情况！
+     * *@param student_id
+     */
     public static void handleSSLHandshake() {
         try {
             TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
@@ -230,7 +239,6 @@ public class MainActivity extends AppCompatActivity {
                 public void checkServerTrusted(X509Certificate[] certs, String authType) {
                 }
             }};
-
             SSLContext sc = SSLContext.getInstance("SSL");
             sc.init(null, trustAllCerts, new SecureRandom());
             HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());

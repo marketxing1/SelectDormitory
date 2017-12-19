@@ -5,15 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import cn.edu.pku.zhangqixun.selectdormitory.Model.Student;
-
-public class SuccessActivity extends AppCompatActivity {
+public class Success extends AppCompatActivity {
     TextView no,name,sex,buildingno,bedno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_success);
+        setContentView(R.layout.success);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("分配宿舍信息");

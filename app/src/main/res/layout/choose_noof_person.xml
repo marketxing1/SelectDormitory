@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="wangchao.com.choosedormitory.ChooseNoofPerson">
+    tools:context="cn.edu.pku.zhangqixun.selectdormitory.ChoosePerson">
     <ListView
         android:id="@+id/deal_with_personno"
         android:layout_width="match_parent"

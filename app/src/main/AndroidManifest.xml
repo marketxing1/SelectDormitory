@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseRoom" />
-        <activity android:name=".ChooseNoofPerson" />
+        <activity android:name=".ChoosePerson" />
         <activity android:name=".multiPeople" />
-        <activity android:name=".SuccessActivity" />
-        <activity android:name=".BacktoSuccessActivity"></activity>
+        <activity android:name=".Success" />
+        <activity android:name=".Success_Back"></activity>
     </application>
 
 </manifest>

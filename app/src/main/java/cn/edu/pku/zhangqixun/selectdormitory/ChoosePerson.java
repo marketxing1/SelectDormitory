@@ -21,10 +21,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.edu.pku.zhangqixun.selectdormitory.Model.MyArrayAdapter;
-import cn.edu.pku.zhangqixun.selectdormitory.Model.Student;
-
-public class ChooseNoofPerson extends AppCompatActivity {
+public class ChoosePerson extends AppCompatActivity {
     ListView choosenoperson;
     List mylist;
     String building_info="https://api.mysspku.com/index.php/V1/MobileCourse/getRoom?gender=";
@@ -35,7 +32,7 @@ public class ChooseNoofPerson extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_noof_person);
+        setContentView(R.layout.choose_noof_person);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("办理住宿");
@@ -46,7 +43,7 @@ public class ChooseNoofPerson extends AppCompatActivity {
         mylist.add("两人办理");
         mylist.add("三人办理");
         mylist.add("四人办理");
-        MyArrayAdapter myArrayAdapter=new MyArrayAdapter(this,R.layout.personno_choose,mylist);
+        MyAdapter myArrayAdapter=new MyAdapter(this,R.layout.single_choose,mylist);
         choosenoperson.setAdapter(myArrayAdapter);
         choosenoperson.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -97,7 +94,7 @@ public class ChooseNoofPerson extends AppCompatActivity {
 
 
 
-                    Intent intent=new Intent(ChooseNoofPerson.this,multiPeople.class);
+                    Intent intent=new Intent(ChoosePerson.this,multiPeople.class);
                     if(i==0){
                         intent.putExtra("personno",0);
                     }
