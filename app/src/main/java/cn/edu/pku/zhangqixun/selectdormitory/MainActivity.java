@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
         return ifnothave[0];
     }
     /**
-     * function：http借口情况！
+     * function：http接口情况！
      * *@param student_id
      */
     public static void handleSSLHandshake() {
