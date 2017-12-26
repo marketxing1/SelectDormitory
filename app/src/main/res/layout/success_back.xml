@@ -7,11 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/success_background"
     tools:context="cn.edu.pku.zhangqixun.selectdormitory.Success_Back">
     <ImageView
     android:layout_width="150dp"
     android:layout_height="150dp"
-    android:src="@drawable/duihao"
+    android:src="@drawable/ok"
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="53dp" />
@@ -39,5 +40,5 @@
         android:layout_centerInParent="true"
         android:layout_below="@+id/tv2"
         android:layout_marginTop="20dp"
-        android:background="@drawable/login"/>
+        android:background="@drawable/login_button"/>
 </RelativeLayout>

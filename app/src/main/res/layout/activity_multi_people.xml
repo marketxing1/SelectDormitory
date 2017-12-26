@@ -7,7 +7,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/college"
     tools:context="cn.edu.pku.zhangqixun.selectdormitory.multiPeople">
     <ScrollView
         android:layout_width="match_parent"
@@ -25,8 +24,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
-                    android:background="#123"
-                    />
+                    android:background="#123"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -40,11 +38,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:lines="1"
                         android:text="测试姓名"
                         android:textSize="18sp"
                         android:id="@+id/choosename"
-                        android:layout_marginLeft="150dp"/>
+                        android:layout_marginLeft="230dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -64,11 +61,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1601210390"
-                        android:lines="1"
+                        android:text="1601210988"
                         android:textSize="18sp"
                         android:id="@+id/chooseno"
-                        android:layout_marginLeft="150dp"/>
+                        android:layout_marginLeft="210dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -91,27 +87,25 @@
                         android:text="男"
                         android:textSize="18sp"
                         android:id="@+id/choosesex"
-                        android:layout_marginLeft="180dp"/>
+                        android:layout_marginLeft="290dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="#123"
                     android:layout_marginTop="5dp"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#E0FFFF">
-
+                    android:background="@drawable/background_color">
                     <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="6dp"
-                    android:text="剩余床位信息"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余床位信息"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="5dp"
 
-                    />
+                        />
                 </LinearLayout>
 
                 <View
@@ -122,28 +116,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:lines="1">
+                    android:layout_marginTop="5dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5号楼"
                         android:textSize="20sp"/>
-
                     <TextView
-                        android:id="@+id/dorimtryno5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="160dp"
                         android:text="12个"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/dorimtryno5"
+                        android:layout_marginLeft="250dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="#123"
-                    android:layout_marginTop="5dp"
-                    android:lines="1"/>
+                    android:layout_marginTop="5dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,14 +150,13 @@
                         android:text="12个"
                         android:textSize="18sp"
                         android:id="@+id/dorimtryno13"
-                        android:layout_marginLeft="160dp"/>
+                        android:layout_marginLeft="250dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="#123"
-                    android:layout_marginTop="5dp"
-                    android:lines="1"/>
+                    android:layout_marginTop="5dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -182,26 +172,17 @@
                         android:text="12个"
                         android:textSize="18sp"
                         android:id="@+id/dorimtryno14"
-                        android:layout_marginLeft="160dp"/>
+                        android:layout_marginLeft="250dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="#123"
                     android:layout_marginTop="5dp"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:background="@drawable/background_color">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="6dp"
-                        android:text="选择楼号信息"
-
-                        />
 
                 </LinearLayout>
                 <View
@@ -226,48 +207,49 @@
                         android:text=">"
                         android:textSize="18sp"
                         android:id="@+id/dorimtrynumber"
-                        android:layout_marginLeft="200dp"/>
+                        android:layout_marginLeft="230dp"/>
                 </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#123"
+                    android:layout_marginTop="5dp"/>
 
                 <LinearLayout
-                    android:id="@+id/tongzhurentv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-                    android:background="#FF83FA"
-                    >
+                    android:orientation="vertical"
+                    android:id="@+id/tongzhurentv"
+                   >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="6dp"
-                        android:text="同住人信息" />
-
+                        android:text="同住人信息"
+                        android:layout_marginTop="10dp"/>
                     <View
-                        android:id="@+id/v1"
                         android:layout_width="match_parent"
                         android:layout_height="1dip"
-                        android:layout_marginTop="1dp"
-                        android:background="#123" />
+                        android:background="#123"
+                        android:id="@+id/v1"
+                        android:layout_marginTop="10dp"/>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:id="@+id/person">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="120dp"
                         android:text="学号"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="验证码"
                         android:textSize="18sp"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="210dp"/>
                 </LinearLayout>
 
                 <View
@@ -281,113 +263,92 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:id="@+id/person1">
-                    <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="学生A："
-                    android:textSize="20sp"
-                    android:layout_marginLeft="0dp"/>
                     <EditText
                         android:id="@+id/tzr1"
-                        android:layout_width="400dp"
+                        android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:layout_weight="1"
-                        android:hint="A的学号"
                         android:background="@drawable/edit_style"
                         ></EditText>
                     <EditText
                         android:id="@+id/yzm1"
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:hint="验证码"
                         android:background="@drawable/edit_style"
                         ></EditText>
                 </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:id="@+id/person2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="学生B："
-                    android:textSize="20sp"
-                    android:layout_marginLeft="0dp"/>
-                <EditText
-                    android:id="@+id/tzr2"
-                    android:layout_width="400dp"
-                    android:layout_height="52dp"
-                    android:layout_weight="1"
-                    android:hint="B的学号"
-                    android:background="@drawable/edit_style"
-                    ></EditText>
-                <EditText
-                    android:id="@+id/yzm2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:layout_weight="1"
-                    android:hint="验证码"
-                    android:background="@drawable/edit_style"
-                    ></EditText>
-            </LinearLayout>
-            <View
-                android:id="@+id/v3"
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="#123"
-                android:layout_marginTop="5dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:id="@+id/person3">
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="学生C："
-                    android:textSize="20sp"
-                    android:layout_marginLeft="0dp"/>
-                <EditText
-                    android:id="@+id/tzr3"
-                    android:layout_width="400dp"
-                    android:layout_height="52dp"
-                    android:layout_weight="1"
-                    android:hint="C的学号"
-                    android:background="@drawable/edit_style"
-                    ></EditText>
-                <EditText
-                    android:id="@+id/yzm3"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/person2">
+                    <EditText
+                        android:id="@+id/tzr2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_style"
+                        ></EditText>
+                    <EditText
+                        android:id="@+id/yzm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:background="@drawable/edit_style"
+                        ></EditText>
+                </LinearLayout>
+                <View
+                    android:id="@+id/v3"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:layout_weight="1"
-                    android:hint="验证码"
-                    android:background="@drawable/edit_style"
-                    ></EditText>
+                    android:layout_height="1dip"
+                    android:background="#123"
+                    android:layout_marginTop="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/person3">
+                    <EditText
+                        android:id="@+id/tzr3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_style"
+                        ></EditText>
+                    <EditText
+                        android:id="@+id/yzm3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_style"
+                        ></EditText>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#123"
+                    android:id="@+id/v4"
+                    android:layout_marginTop="5dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="确定"
+                        android:id="@+id/forsure"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/login"
+                        />
+                </RelativeLayout>
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="#123"
-                android:id="@+id/v4"
-                android:layout_marginTop="5dp"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
 
-                <Button
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="确定"
-                    android:id="@+id/forsure"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/login"
-                    />
-            </RelativeLayout>
-            </LinearLayout>
         </RelativeLayout>
     </ScrollView>
 

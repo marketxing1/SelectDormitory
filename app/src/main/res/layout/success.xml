@@ -8,6 +8,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/college"
         tools:context="wangchao.com.choosedormitory.SinglePerson">
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,13 +29,16 @@
                     android:layout_height="wrap_content"
                     android:text="姓名"
                     android:textSize="20sp"/>
+
                 <TextView
+                    android:id="@+id/succhoosename"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
                     android:text="测试姓名"
-                    android:textSize="18sp"
-                    android:id="@+id/succhoosename"
-                    android:layout_marginLeft="270dp"/>
+                    android:textSize="18sp" />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -54,10 +58,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1601210988"
+                    android:text="0000000000"
+                    android:lines="1"
+                    android:gravity="center_vertical"
                     android:textSize="18sp"
                     android:id="@+id/succhooseno"
-                    android:layout_marginLeft="240dp"/>
+                    android:layout_marginLeft="180dp"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -80,7 +86,10 @@
                     android:text="男"
                     android:textSize="18sp"
                     android:id="@+id/succhoosesex"
-                    android:layout_marginLeft="310dp"/>
+                    android:layout_marginLeft="200dp"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -108,12 +117,15 @@
                     android:layout_height="wrap_content"
                     android:text="状态"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
                     android:text="已完成办理"
-                    android:textSize="18sp"
-                    android:layout_marginLeft="230dp"/>
+                    android:textSize="18sp" />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -133,9 +145,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5"
+                    android:layout_marginLeft="200dp"
+                    android:lines="1"
+                    android:gravity="center_vertical"
                     android:id="@+id/sucdorno"
                     android:textSize="18sp"
-                    android:layout_marginLeft="270dp"/>
+                   />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#123"
+                android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="宿舍号"
+
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5214"
+                    android:layout_marginLeft="180dp"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:id="@+id/sucbedno"
+                    android:textSize="18sp"
+                   />
+
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -155,10 +197,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5214"
-                    android:id="@+id/sucbedno"
+                    android:text="暂不支持"
+                    android:layout_marginLeft="180dp"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:id="@+id/bed_number"
                     android:textSize="18sp"
-                    android:layout_marginLeft="270dp"/>
+                    />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"

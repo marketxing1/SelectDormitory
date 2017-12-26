@@ -5,22 +5,21 @@
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bed"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="194dp"
-        android:background="@drawable/login"
         android:orientation="horizontal"
         android:weightSum="1">
 
         <ListView
+            android:id="@+id/mylist"
             android:layout_width="250dp"
             android:layout_height="match_parent"
             android:choiceMode="singleChoice"
-            android:id="@+id/mylist"
             android:divider="#123"
-            android:dividerHeight="1px"
-            ></ListView>
+            android:dividerHeight="1px"></ListView>
         <View
             android:layout_width="1dip"
             android:layout_height="194dp"
@@ -29,8 +28,7 @@
             android:id="@+id/mypic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/touxiang"
-
+            android:src="@drawable/girl"
             />
 
 
@@ -42,7 +40,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/login">
+        >
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
@@ -97,14 +95,16 @@
             android:layout_below="@+id/tv5"
             android:textSize="20sp"
             />
+
         <TextView
+            android:id="@+id/tv7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv7"
-            android:text="1.办理多人住宿时，需要提供校验码，请勿透露给非同住人"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/tv6"
-            android:textSize="18sp"
-            android:layout_centerInParent="true"/>
+            android:text="1.办理多人住宿时，需要提供校验码，请勿透露给非同住人"
+            android:textSize="18sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/button_div" />
+            android:background="@drawable/process" />
     </RelativeLayout>
 
 </LinearLayout>

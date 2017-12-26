@@ -2,6 +2,7 @@ package cn.edu.pku.zhangqixun.selectdormitory;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -14,7 +15,7 @@ import cn.edu.pku.zhangqixun.*;
  * author: 余星星
  * data:2017/12/13.
  * E-mail:2549721818@qq.com
- * brief:主函数。
+ * brief:适配器函数。
  */
 public class MyAdapter extends ArrayAdapter {
     Context context;
@@ -26,7 +27,6 @@ public class MyAdapter extends ArrayAdapter {
         this.resourceid=resource;
         this.myList=mylist;
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView!=null){
